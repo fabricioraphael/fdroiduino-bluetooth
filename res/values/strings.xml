@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, BluetoothActivity!</string>
+    <string name="app_name">FDroiduino Bluetooth</string>
+	<string name="uri">http://www.devtime.com.br</string>
+	
+	<string name="setting">Confg</string>
+	<string name="searchdevice">Search</string>
+	<string name="monitor">Monitor</string>
+	<string name="about">About</string>
+	<string name="exit">Exit</string>
+	<string name="message">Are you sure?</string>
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+	<string-array name="language">
+		<item>ingles</item>
+		<item>Chines</item>
+	</string-array>
+	<string name="open">Open Bluetooth</string>
+	<string name="close">Close Bluetooch</string>
+	<string name="allowdiscoverable">Allow Discoverable</string>
+	<string name="bluetoothmessage">ative o seu bluetooth ae cumpadi.</string>
+	<string name="strreturn">Return</string>
+	<string name="scaning">Scaning...</string>
+	<string name="nodevice">There isn\'t bluetooch devices!</string>
+	<string name="send">Send</string>
+	<string name="clear">Clear</string>
+	<string name="hexview">View as Hex</string>
+	<string name="hexsend">Send as Hex</string>
+	<string name="selectonedevice">Escolhe um ai rapá</string>
+	<string name="version">version:1.0.1</string>
+	<string name="about1">Um programa muito do batraquio! =p</string>
+	<string name="about_us">About us</string>
+	<string name="about2">muito maneiro.</string>
+	<string name="ioexception">Connect failed!</string>
+	<string name="wait">Wait to connect the device...</string>
+	<string name="number">Please input the valid hex character.
+		ex:\'0-9\',\'A-F\',\'a-f\'.</string>
+<string name="newline">Send as New Line</string>
+	
+</resources>

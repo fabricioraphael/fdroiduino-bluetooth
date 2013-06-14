@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:id="@+id/main">
+	
+	<ImageView 
+	    android:id="@+id/logo" 
+	    android:src="@drawable/beer"
+		android:layout_width="150px" 
+		android:layout_height="150px"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="50dip">
+		
+	</ImageView>
+	
+	<Button 
+	    android:id="@+id/btnSearchDevice" 
+	    android:text="@string/searchdevice"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:textSize="20dip"></Button>
+	<Button 
+	    android:id="@+id/btnMonitor" 
+	    android:text="@string/monitor"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:textSize="20dip"></Button>
+	<Button 
+	    android:id="@+id/btnAbout" 
+	    android:text="@string/about"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:textSize="20dip"></Button>
+	<Button 
+	    android:id="@+id/btnExit" 
+	    android:text="@string/exit"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:textSize="20dip"></Button>
+    
+    
+</LinearLayout>
