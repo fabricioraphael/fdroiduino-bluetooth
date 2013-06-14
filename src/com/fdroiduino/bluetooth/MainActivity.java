@@ -1,6 +1,6 @@
 package com.fdroiduino.bluetooth;
 
-
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
@@ -8,27 +8,31 @@ import android.content.Intent;
 import android.content.res.Resources.NotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class MainActivity extends MyActivity{
+import com.fdroiduino.bluetooth.views.AboutActivity;
+import com.fdroiduino.bluetooth.views.MonitorActivity;
+import com.fdroiduino.bluetooth.views.SearchDeviceActivity;
 
-	ImageView logo;
-	Button btnSearchDevice;
-	Button btnMonitor;
-	Button btnAbout;
-	Button btnExit;
-	/* Get Default Adapter */
+public class MainActivity extends Activity{
+	private ImageView logo;
+	private Button btnSearchDevice;
+	private Button btnMonitor;
+	private Button btnAbout;
+	private Button btnExit;
+
 	private BluetoothAdapter _bluetooth = BluetoothAdapter.getDefaultAdapter();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		_bluetooth.enable();
+		
 		logo = (ImageView) findViewById(R.id.logo);
 		logo.setClickable(true);
 		logo.setOnClickListener(new OnClickListener() {
@@ -40,7 +44,6 @@ public class MainActivity extends MyActivity{
 					startActivity(intent);
 				} catch (NotFoundException e) {
 					e.printStackTrace();
-					Log.e("ACTION_VIEW", e.getMessage());
 				}
 			}
 		});
@@ -57,7 +60,7 @@ public class MainActivity extends MyActivity{
 
 		btnMonitor = (Button) findViewById(R.id.btnMonitor);
 		btnMonitor.setOnClickListener(new OnClickListener() {
-
+			
 			public void onClick(View v) {
 				_bluetooth.enable();
 				Intent intent = new Intent();
@@ -96,24 +99,25 @@ public class MainActivity extends MyActivity{
 	protected void dialog() {
 		AlertDialog.Builder build = new AlertDialog.Builder(MainActivity.this);
 		build.setTitle(R.string.message);
-		build.setPositiveButton(R.string.ok,
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.dismiss();
-						if (_bluetooth.isEnabled()) {
-							_bluetooth.disable();
-						}
-						SocketApplication app = (SocketApplication) getApplicationContext();
-						app.setDevice(null);
-						MainActivity.this.finish();
-					}
-				});
-		build.setNegativeButton(R.string.cancel,
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.dismiss();
-					}
-				});
+		build.setPositiveButton(R.string.ok,new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+				
+				if (_bluetooth.isEnabled()) {
+					_bluetooth.disable();
+				}
+				
+				SocketApplication app = (SocketApplication) getApplicationContext();
+				app.setDevice(null);
+				MainActivity.this.finish();
+			}
+		});
+		build.setNegativeButton(R.string.cancel,new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+			}
+		});
+		
 		build.create().show();
 	}
 

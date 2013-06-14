@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="10dip" >
@@ -9,6 +9,7 @@
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
 		android:layout_alignParentRight="true">
+		
 		<Button 
 		    android:id="@+id/btnSend" 
 		    android:layout_width="wrap_content"
@@ -17,6 +18,7 @@
 			android:onClick="onButtonClicksend" 
 			android:layout_alignParentRight="true">
 		</Button>
+		
 		<EditText 
 		    android:id="@+id/sEditText" 
 		    android:layout_width="fill_parent"
@@ -24,28 +26,7 @@
 			android:layout_toLeftOf="@+id/btnSend"
 			android:inputType="text">
 		</EditText>
-		<CheckBox 
-		    android:id="@+id/cbxHexView" 
-		    android:layout_width="wrap_content"
-			android:layout_height="wrap_content" 
-			android:text="@string/hexview"
-			android:layout_below="@id/sEditText"></CheckBox>
-		<CheckBox 
-		    android:id="@+id/cbxHexSend" 
-		    android:layout_width="wrap_content"
-			android:layout_height="wrap_content" 
-			android:text="@string/hexsend"
-			android:layout_below="@id/sEditText" 
-			android:layout_toRightOf="@id/cbxHexView">
-		</CheckBox>
-		<CheckBox 
-		    android:id="@+id/cbxNewLine" 
-		    android:layout_width="wrap_content"
-			android:layout_height="wrap_content" 
-			android:text="@string/newline"
-			android:layout_below="@id/cbxHexView" 
-			android:layout_toRightOf="@id/cbxHexView">
-		</CheckBox>
+		
 		<Button 
 		    android:id="@+id/btnClear" 
 		    android:layout_width="wrap_content"
@@ -56,16 +37,67 @@
 			android:layout_alignParentRight="true">
 		</Button>
 	</RelativeLayout>
-	<ScrollView 
-	    android:id="@+id/mScrollView" 
+	
+	<RelativeLayout 
+	    android:id="@+id/rl_commands"
 		android:layout_width="fill_parent" 
-		android:layout_height="match_parent"
-		android:layout_above="@id/editPanel">
-		<TextView 
-		    android:id="@+id/sTextView" 
-		    android:layout_width="fill_parent"
-			android:layout_height="fill_parent" 
-			android:layout_below="@+id/sEditText">
-		</TextView>
-	</ScrollView>
-</LinearLayout>
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/editPanel">
+			    
+	</RelativeLayout>
+
+	<ImageButton
+	    android:id="@+id/btn_go_top"
+	    android:layout_width="200px"
+	    android:layout_height="200px"
+	    android:layout_below="@+id/rl_commands"
+	    android:onClick="onButtonClickTop"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="40dp"
+	    android:background="@drawable/top0" />
+
+	<ImageButton
+	    android:id="@+id/btn_go_right"
+	    android:layout_width="200px"
+	    android:layout_height="200px"
+	    android:onClick="onButtonClickRight"
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginRight="10px"
+	    android:background="@drawable/right0" />
+
+	<ImageButton
+	    android:id="@+id/btn_go_left"
+	    android:layout_width="200px"
+	    android:layout_height="200px"
+	    android:onClick="onButtonClickLeft"
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginLeft="10px"
+	    android:background="@drawable/left0" />
+
+	<ImageButton
+	    android:id="@+id/btn_go_bot"
+	    android:layout_width="200px"
+	    android:layout_height="200px"
+	    android:onClick="onButtonClickBot"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="135px"
+	    android:background="@drawable/bot0" />
+
+	<ImageButton
+	    android:id="@+id/imageButton1"
+	    android:layout_width="100px"
+	    android:layout_height="100px"
+	    android:onClick="onButtonClickStop"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true"
+	    android:background="@drawable/stop" />
+
+</RelativeLayout>
+
+
+
+
+

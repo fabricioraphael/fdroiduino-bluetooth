@@ -22,19 +22,19 @@
         </activity>
                
         <activity 
-		    android:name="AboutActivity" 
+		    android:name="com.fdroiduino.bluetooth.views.AboutActivity" 
 		    android:screenOrientation="portrait"></activity>
 		
 		<activity 
-		    android:name="MonitorActivity" 
+		    android:name="com.fdroiduino.bluetooth.views.MonitorActivity" 
 		    android:screenOrientation="portrait"></activity>
 		
 		<activity 
-		    android:name="SearchDeviceActivity" 
+		    android:name="com.fdroiduino.bluetooth.views.SearchDeviceActivity" 
 		    android:screenOrientation="portrait"></activity>
 		
 		<activity 
-		    android:name="SettingActivity" 
+		    android:name="com.fdroiduino.bluetooth.views.SettingActivity" 
 		    android:screenOrientation="portrait"></activity>
        
     </application>

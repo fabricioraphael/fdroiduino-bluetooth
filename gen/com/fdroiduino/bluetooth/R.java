@@ -15,29 +15,43 @@ public final class R {
     }
     public static final class drawable {
         public static final int beer=0x7f020000;
-        public static final int bgcolor=0x7f020002;
-        public static final int ic_launcher=0x7f020001;
-        public static final int input=0x7f020003;
-        public static final int output=0x7f020004;
+        public static final int bgcolor=0x7f02000f;
+        public static final int bot0=0x7f020001;
+        public static final int bot1=0x7f020002;
+        public static final int bot2=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int input=0x7f020010;
+        public static final int left0=0x7f020005;
+        public static final int left1=0x7f020006;
+        public static final int left2=0x7f020007;
+        public static final int output=0x7f020011;
+        public static final int right0=0x7f020008;
+        public static final int right1=0x7f020009;
+        public static final int right2=0x7f02000a;
+        public static final int stop=0x7f02000b;
+        public static final int top0=0x7f02000c;
+        public static final int top1=0x7f02000d;
+        public static final int top2=0x7f02000e;
     }
     public static final class id {
         public static final int btnAbout=0x7f070004;
-        public static final int btnClear=0x7f07000c;
+        public static final int btnClear=0x7f070009;
         public static final int btnExit=0x7f070005;
         public static final int btnMonitor=0x7f070003;
-        public static final int btnReturn=0x7f070010;
+        public static final int btnReturn=0x7f070011;
         public static final int btnSearchDevice=0x7f070002;
         public static final int btnSend=0x7f070007;
-        public static final int cbxHexSend=0x7f07000a;
-        public static final int cbxHexView=0x7f070009;
-        public static final int cbxNewLine=0x7f07000b;
+        public static final int btn_go_bot=0x7f07000e;
+        public static final int btn_go_left=0x7f07000d;
+        public static final int btn_go_right=0x7f07000c;
+        public static final int btn_go_top=0x7f07000b;
         public static final int editPanel=0x7f070006;
+        public static final int imageButton1=0x7f07000f;
         public static final int logo=0x7f070001;
-        public static final int mScrollView=0x7f07000d;
         public static final int main=0x7f070000;
+        public static final int rl_commands=0x7f07000a;
         public static final int sEditText=0x7f070008;
-        public static final int sTextView=0x7f07000e;
-        public static final int spLanguage=0x7f07000f;
+        public static final int spLanguage=0x7f070010;
     }
     public static final class layout {
         public static final int about=0x7f030000;

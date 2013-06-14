@@ -1,10 +1,11 @@
-package com.fdroiduino.bluetooth;
+package com.fdroiduino.bluetooth.views;
 
+import android.app.Activity;
 import android.os.Bundle;
 
+import com.fdroiduino.bluetooth.R;
 
-public class AboutActivity extends MyActivity {
-    /** Called when the activity is first created. */
+public class AboutActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

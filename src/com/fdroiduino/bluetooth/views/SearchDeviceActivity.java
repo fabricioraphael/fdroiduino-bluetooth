@@ -1,19 +1,17 @@
-package com.fdroiduino.bluetooth;
+package com.fdroiduino.bluetooth.views;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fdroiduino.bluetooth.util.Application;
-import com.fdroiduino.bluetooth.util.SamplesUtils;
-
+import android.app.ListActivity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.DialogInterface.OnDismissListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -23,8 +21,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.fdroiduino.bluetooth.R;
+import com.fdroiduino.bluetooth.util.Application;
+import com.fdroiduino.bluetooth.util.SamplesUtils;
 
-public class SearchDeviceActivity extends MyListActivity {
+
+public class SearchDeviceActivity extends ListActivity {
 	private Handler _handler = new Handler();
 	/* Get Default Adapter */
 	private BluetoothAdapter _bluetooth = BluetoothAdapter.getDefaultAdapter();
@@ -35,6 +37,7 @@ public class SearchDeviceActivity extends MyListActivity {
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		_bluetooth.enable();
 
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND,WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
 		setContentView(R.layout.searchdevice);

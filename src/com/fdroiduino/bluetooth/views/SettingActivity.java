@@ -1,20 +1,8 @@
-package com.fdroiduino.bluetooth;
+package com.fdroiduino.bluetooth.views;
 
-import java.util.Locale;
+import android.app.Activity;
 
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
-
-
-
-public class SettingActivity extends MyActivity {
+public class SettingActivity extends Activity {
 //	Spinner spLanguage;
 //	Button btnReturn;
 //
